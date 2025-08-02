@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+body{
+    min-height: 100vh;
+    background-image: url(fondo3.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    align-items: center;
+    padding-top: 12%;
+    flex-direction: column;
+}
+.button{
+    display:inline-flex;
+    margin-bottom:20px;
+}
+.boton{
+    display: flex;
+    background-color: #a583e9;
+    border:#800080;
+    color: #fff;
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-radius: 12px;  
+
+}
+h1{
+    font-size: 3em;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+h2{
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 18px;
+}
+.countdown{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    max-width: 450px;
+}
+.countdown div span{
+    font-size: 3rem;
+    font-weight: 700;
+
+}
+.countdown div p{
+    font-size: 1.4rem;
+}
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4; /* Un fondo suave para la página */
+}
+
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espacio entre cada unidad de tiempo */
+}
+
+.countdown > div {
+  display: flex;
+  flex-direction: column; /* Apila el número y el texto */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center; /* Centra verticalmente */
+}
+
+.countdown span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px; /* Tamaño del círculo */
+  height: 90px; /* Tamaño del círculo */
+  background-color: #e0b0ff; /* Morado pastel */
+  color: white; /* Color del número */
+  border-radius: 50%; /* Esto crea el círculo */
+  font-size: 2em; /* Tamaño del número */
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para el círculo */
+}
+
+.countdown p {
+  margin-top: 10px; /* Espacio entre el círculo y el texto "dias", "horas", etc. */
+  font-size: 1em;
+  color: #666; /* Color del texto descriptivo */
+  text-transform: uppercase; /* Poner en mayúsculas */
+  letter-spacing: 1px;
+}

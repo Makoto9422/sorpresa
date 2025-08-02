@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CUENTA REGRESIVA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <div class="container">
+    <h1>CUENTA REGRESIVA</h1>
+    
+    <div class="countdown">
+      <div>
+        <span id="dias">0</span> <p>dias</p>
+      </div>
+      <div>
+        <span id="horas">0</span> <p>horas</p>
+      </div>
+      <div>
+        <span id="minutos">0</span> <p>minutos</p>
+      </div>
+      <div>
+        <span id="segundos">0</span> <p>segundos</p>
+      </div>
+    </div>
+    
+    <div class="button">
+     <a href="index.html" class="boton">INICIO</a>
+     <a href="ultimo.html" class="boton">INSTRUCCIONES FINALES</a> 
+    </div>
+
+  </div>
+  
+  <script>
+    function actualizarCountdown() {
+        const fechaActual = new Date();
+
+        const fechaObjetivo = new Date('August 2, 2025 22:00:00'); 
+        
+        const diferencia = fechaObjetivo - fechaActual;
+        
+
+        if (diferencia <= 0) {
+            document.getElementById('dias').textContent = '0';
+            document.getElementById('horas').textContent = '0';
+            document.getElementById('minutos').textContent = '0';
+            document.getElementById('segundos').textContent = '0';
+
+            document.querySelector('.countdown').innerHTML='hola mi amor (mensaje de prueba)';
+            clearInterval(intervalo);
+            return; 
+        }
+
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+        
+        document.getElementById('dias').textContent = dias;
+        document.getElementById('horas').textContent = horas;
+        document.getElementById('minutos').textContent = minutos;
+        document.getElementById('segundos').textContent = segundos;
+    }
+
+   
+    actualizarCountdown();
+    
+    const intervalo = setInterval(actualizarCountdown, 1000);
+  </script>
+</body>
+</html>
